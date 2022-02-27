@@ -1,0 +1,1 @@
+{"version":3,"file":"popup.js","mappings":";;;;;AAAA;AACA;AACA;AACA;AACA","sources":["webpack://reducetab/./src/popup/popup.js"],"sourcesContent":["const $header = document.createElement(\"h1\");\r\n\r\n$header.textContent = \"Hello Extension\";\r\n\r\ndocument.body.appendChild($header);\r\n"],"names":[],"sourceRoot":""}

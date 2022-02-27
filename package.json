@@ -1,0 +1,32 @@
+{
+  "name": "reducetab",
+  "version": "1.0.0",
+  "description": "reduce tab",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch --progress --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyeong1024/ReduceTab.git"
+  },
+  "author": "Kyeongti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kyeong1024/ReduceTab/issues"
+  },
+  "homepage": "https://github.com/Kyeong1024/ReduceTab#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
