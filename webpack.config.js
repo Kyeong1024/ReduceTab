@@ -6,9 +6,17 @@ module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   entry: {
-    popup: path.resolve("src/popup/popup.js"),
+    popup: "./src/popup/popup.js",
+    options: "./src/options/options.js",
   },
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
@@ -19,12 +27,18 @@ module.exports = {
       ],
     }),
     new HtmlPlugin({
-      filename: "popup.html",
+      filename: "./popup.html",
+      template: "./src/popup/popup.html",
       chunks: ["popup"],
+    }),
+    new HtmlPlugin({
+      filename: "./options.html",
+      template: "./src/options/options.html",
+      chunks: ["options"],
     }),
   ],
   output: {
     filename: "[name].js",
-    path: path.resolve("dist"),
+    path: path.resolve(__dirname, "dist"),
   },
 };

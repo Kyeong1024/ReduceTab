@@ -1,5 +1,11 @@
-const $header = document.createElement("h1");
+import "./style.css";
 
-$header.textContent = "Hello Extension";
+const $tabCount = document.getElementById("tab-count");
+const $onoff = document.getElementById("on-off-switch");
 
-document.body.appendChild($header);
+const count = 8;
+$tabCount.textContent = count;
+
+$onoff.addEventListener("click", () => {
+  console.log($onoff.checked);
+});

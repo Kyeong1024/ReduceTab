@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/popup/style.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/popup/style.css ***!
-  \*******************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/options/style.css":
+/*!*********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/options/style.css ***!
+  \*********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  width: 300px;\r\n  height: 400px;\r\n}\r\n\r\n#tab-header {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-around;\r\n}\r\n\r\n#tab-count {\r\n  font-size: large;\r\n  width: 20px;\r\n  height: 20px;\r\n  border: 5px solid;\r\n  color: black;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 3px;\r\n}\r\n\r\n/* The switch - the box around the slider */\r\n.switch {\r\n  position: relative;\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 34px;\r\n  margin-left: 30px;\r\n}\r\n\r\n/* Hide default HTML checkbox */\r\n.switch input {\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n/* The slider */\r\n.slider {\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n}\r\n\r\n.slider:before {\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 26px;\r\n  width: 26px;\r\n  left: 4px;\r\n  bottom: 4px;\r\n  background-color: white;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n  background-color: #10a317;\r\n}\r\n\r\ninput:focus + .slider {\r\n  box-shadow: 0 0 1px #10a317;\r\n}\r\n\r\ninput:checked + .slider:before {\r\n  -webkit-transform: translateX(26px);\r\n  -ms-transform: translateX(26px);\r\n  transform: translateX(26px);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/popup/style.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,gBAAgB;EAChB,WAAW;EACX,YAAY;EACZ,iBAAiB;EACjB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA,2CAA2C;AAC3C;EACE,kBAAkB;EAClB,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,iBAAiB;AACnB;;AAEA,+BAA+B;AAC/B;EACE,UAAU;EACV,QAAQ;EACR,SAAS;AACX;;AAEA,eAAe;AACf;EACE,kBAAkB;EAClB,eAAe;EACf,MAAM;EACN,OAAO;EACP,QAAQ;EACR,SAAS;EACT,sBAAsB;EACtB,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,WAAW;EACX,SAAS;EACT,WAAW;EACX,uBAAuB;EACvB,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,mCAAmC;EACnC,+BAA+B;EAC/B,2BAA2B;AAC7B","sourcesContent":["body {\r\n  width: 300px;\r\n  height: 400px;\r\n}\r\n\r\n#tab-header {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-around;\r\n}\r\n\r\n#tab-count {\r\n  font-size: large;\r\n  width: 20px;\r\n  height: 20px;\r\n  border: 5px solid;\r\n  color: black;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 3px;\r\n}\r\n\r\n/* The switch - the box around the slider */\r\n.switch {\r\n  position: relative;\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 34px;\r\n  margin-left: 30px;\r\n}\r\n\r\n/* Hide default HTML checkbox */\r\n.switch input {\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n/* The slider */\r\n.slider {\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n}\r\n\r\n.slider:before {\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 26px;\r\n  width: 26px;\r\n  left: 4px;\r\n  bottom: 4px;\r\n  background-color: white;\r\n  -webkit-transition: 0.4s;\r\n  transition: 0.4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n  background-color: #10a317;\r\n}\r\n\r\ninput:focus + .slider {\r\n  box-shadow: 0 0 1px #10a317;\r\n}\r\n\r\ninput:checked + .slider:before {\r\n  -webkit-transform: translateX(26px);\r\n  -ms-transform: translateX(26px);\r\n  transform: translateX(26px);\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  text-align: center;\r\n}\r\n\r\n#option-container {\r\n  display: flex;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n#count-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n#tab-count,\r\n#sorting {\r\n  width: 300px;\r\n  height: 50px;\r\n  border: 1px solid #4997d6;\r\n  color: #fff;\r\n  background: #4997d6;\r\n  display: flex;\r\n  align-content: center;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 5px;\r\n  font-size: large;\r\n  font-weight: bold;\r\n}\r\n\r\n#count-number {\r\n  width: 150px;\r\n  height: 30px;\r\n  border-radius: 3px;\r\n  box-shadow: 3px 3px 0px 0px #999;\r\n  margin-top: 20px;\r\n  text-align: center;\r\n}\r\n\r\n#radio-button-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n  align-items: flex-start;\r\n  padding-left: 10px;\r\n}\r\n\r\n#save-button {\r\n  width: 200px;\r\n  height: 50px;\r\n  background: linear-gradient(to bottom right, #4834d4, #9090cc);\r\n  border-radius: 5px;\r\n  border: 1px solid #4834d4;\r\n  color: #fff;\r\n  font-size: x-large;\r\n  font-weight: bold;\r\n}\r\n\r\n#save-button:active {\r\n  margin-left: 5px;\r\n  margin-top: 5px;\r\n  box-shadow: none;\r\n}\r\n\r\n.container {\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  margin-bottom: 12px;\r\n  cursor: pointer;\r\n  font-size: 22px;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n}\r\n\r\n/* Hide the browser's default radio button */\r\n.container input {\r\n  position: absolute;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n  height: 0;\r\n  width: 0;\r\n}\r\n\r\n/* Create a custom radio button */\r\n.checkmark {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 25px;\r\n  width: 25px;\r\n  background-color: #eee;\r\n  border-radius: 50%;\r\n}\r\n\r\n/* On mouse-over, add a grey background color */\r\n.container:hover input ~ .checkmark {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* When the radio button is checked, add a blue background */\r\n.container input:checked ~ .checkmark {\r\n  background-color: #2196f3;\r\n}\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n.checkmark:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: none;\r\n}\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n.container input:checked ~ .checkmark:after {\r\n  display: block;\r\n}\r\n\r\n/* Style the indicator (dot/circle) */\r\n.container .checkmark:after {\r\n  top: 9px;\r\n  left: 9px;\r\n  width: 8px;\r\n  height: 8px;\r\n  border-radius: 50%;\r\n  background: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/options/style.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;;EAEE,YAAY;EACZ,YAAY;EACZ,yBAAyB;EACzB,WAAW;EACX,mBAAmB;EACnB,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;EAClB,gBAAgB;EAChB,iBAAiB;AACnB;;AAEA;EACE,YAAY;EACZ,YAAY;EACZ,kBAAkB;EAClB,gCAAgC;EAChC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,gBAAgB;EAChB,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,YAAY;EACZ,8DAA8D;EAC9D,kBAAkB;EAClB,yBAAyB;EACzB,WAAW;EACX,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,eAAe;EACf,eAAe;EACf,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;EACrB,iBAAiB;AACnB;;AAEA,4CAA4C;AAC5C;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;EACf,SAAS;EACT,QAAQ;AACV;;AAEA,iCAAiC;AACjC;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,kBAAkB;AACpB;;AAEA,+CAA+C;AAC/C;EACE,sBAAsB;AACxB;;AAEA,4DAA4D;AAC5D;EACE,yBAAyB;AAC3B;;AAEA,oEAAoE;AACpE;EACE,WAAW;EACX,kBAAkB;EAClB,aAAa;AACf;;AAEA,iDAAiD;AACjD;EACE,cAAc;AAChB;;AAEA,qCAAqC;AACrC;EACE,QAAQ;EACR,SAAS;EACT,UAAU;EACV,WAAW;EACX,kBAAkB;EAClB,iBAAiB;AACnB","sourcesContent":["body {\r\n  text-align: center;\r\n}\r\n\r\n#option-container {\r\n  display: flex;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n#count-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n#tab-count,\r\n#sorting {\r\n  width: 300px;\r\n  height: 50px;\r\n  border: 1px solid #4997d6;\r\n  color: #fff;\r\n  background: #4997d6;\r\n  display: flex;\r\n  align-content: center;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 5px;\r\n  font-size: large;\r\n  font-weight: bold;\r\n}\r\n\r\n#count-number {\r\n  width: 150px;\r\n  height: 30px;\r\n  border-radius: 3px;\r\n  box-shadow: 3px 3px 0px 0px #999;\r\n  margin-top: 20px;\r\n  text-align: center;\r\n}\r\n\r\n#radio-button-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n  align-items: flex-start;\r\n  padding-left: 10px;\r\n}\r\n\r\n#save-button {\r\n  width: 200px;\r\n  height: 50px;\r\n  background: linear-gradient(to bottom right, #4834d4, #9090cc);\r\n  border-radius: 5px;\r\n  border: 1px solid #4834d4;\r\n  color: #fff;\r\n  font-size: x-large;\r\n  font-weight: bold;\r\n}\r\n\r\n#save-button:active {\r\n  margin-left: 5px;\r\n  margin-top: 5px;\r\n  box-shadow: none;\r\n}\r\n\r\n.container {\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  margin-bottom: 12px;\r\n  cursor: pointer;\r\n  font-size: 22px;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n}\r\n\r\n/* Hide the browser's default radio button */\r\n.container input {\r\n  position: absolute;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n  height: 0;\r\n  width: 0;\r\n}\r\n\r\n/* Create a custom radio button */\r\n.checkmark {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 25px;\r\n  width: 25px;\r\n  background-color: #eee;\r\n  border-radius: 50%;\r\n}\r\n\r\n/* On mouse-over, add a grey background color */\r\n.container:hover input ~ .checkmark {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* When the radio button is checked, add a blue background */\r\n.container input:checked ~ .checkmark {\r\n  background-color: #2196f3;\r\n}\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n.checkmark:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: none;\r\n}\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n.container input:checked ~ .checkmark:after {\r\n  display: block;\r\n}\r\n\r\n/* Style the indicator (dot/circle) */\r\n.container .checkmark:after {\r\n  top: 9px;\r\n  left: 9px;\r\n  width: 8px;\r\n  height: 8px;\r\n  border-radius: 50%;\r\n  background: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -170,10 +170,10 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./src/popup/style.css":
-/*!*****************************!*\
-  !*** ./src/popup/style.css ***!
-  \*****************************/
+/***/ "./src/options/style.css":
+/*!*******************************!*\
+  !*** ./src/options/style.css ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -192,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/popup/style.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/options/style.css");
 
       
       
@@ -601,25 +601,17 @@ module.exports = styleTagTransform;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!****************************!*\
-  !*** ./src/popup/popup.js ***!
-  \****************************/
+/*!********************************!*\
+  !*** ./src/options/options.js ***!
+  \********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/popup/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/options/style.css");
 
 
-const $tabCount = document.getElementById("tab-count");
-const $onoff = document.getElementById("on-off-switch");
-
-const count = 8;
-$tabCount.textContent = count;
-
-$onoff.addEventListener("click", () => {
-  console.log($onoff.checked);
-});
+console.log("option page");
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=popup.js.map
+//# sourceMappingURL=options.js.map
