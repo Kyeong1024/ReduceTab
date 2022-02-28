@@ -10,25 +10,31 @@
     <h1>Reduce Tab Option</h1>
     <div id="option-container">
       <div id="count-container">
-        <div id="tab-count">Tab Count</div>
-        <input type="number" min="5" max="25" id="count-number" value="5" />
+        <div id="tab-count-text">Tab Count (5~25)</div>
+        <input type="number" min="5" max="25" id="count-number" value="8" />
       </div>
       <div id="sorting-container">
-        <div id="sorting">Sorting</div>
+        <div id="sorting-text">Sorting</div>
         <div id="radio-button-container">
           <label class="container"
             >Latest
-            <input type="radio" checked="checked" name="radio" />
+            <input
+              type="radio"
+              checked="checked"
+              name="radio"
+              id="sorting"
+              value="latest"
+            />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Oldest
-            <input type="radio" name="radio" />
+            <input type="radio" name="radio" id="sorting" value="oldest" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Name
-            <input type="radio" name="radio" />
+            <input type="radio" name="radio" id="sorting" value="name" />
             <span class="checkmark"></span>
           </label>
         </div>
