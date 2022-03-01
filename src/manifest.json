@@ -8,5 +8,8 @@
     "default_title": "ReduceTab Extension"
   },
   "options_page": "options.html",
-  "permissions": ["storage", "management"]
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs"]
 }
