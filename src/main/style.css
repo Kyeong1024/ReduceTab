@@ -1,0 +1,15 @@
+.tab-container {
+  display: flex;
+  align-items: center;
+}
+
+.tab-card {
+  display: flex;
+  width: 500px;
+  height: 50px;
+  border: 3px solid black;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 5px;
+}

@@ -9,6 +9,7 @@ module.exports = {
     popup: "./src/popup/popup.js",
     options: "./src/options/options.js",
     background: "./src/background.js",
+    main: "./src/main/main.js",
   },
   module: {
     rules: [
@@ -36,6 +37,11 @@ module.exports = {
       filename: "./options.html",
       template: "./src/options/options.html",
       chunks: ["options"],
+    }),
+    new HtmlPlugin({
+      filename: "./main.html",
+      template: "./src/main/main.html",
+      chunks: ["main"],
     }),
   ],
   output: {

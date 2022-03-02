@@ -1,10 +1,6 @@
-// const tabList = {};
+import { getTabCount, getTabList, setStorage } from "./utils/storage";
 
-// chrome.storage.local.set({
-//   tabList,
-// });
-
-// chrome.tabs.onActivated.addListener(() => {
+// chrome.tabs.onActivated.addListener(() => { // 초기 설정부분
 //   chrome.tabs.query(
 //     {
 //       currentWindow: true,
@@ -13,3 +9,44 @@
 //     (currentTabs) => {}
 //   );
 // });
+
+chrome.tabs.onActivated.addListener((tab) => {
+  chrome.tabs.query(
+    {
+      currentWindow: true,
+      active: false,
+    },
+    async (current) => {
+      const tabCount = await getTabCount();
+
+      if (current.length > tabCount) {
+        let { tabList } = await getTabList();
+
+        if (!tabList) {
+          setStorage({ tabList: {} });
+          tabList = await getTabList();
+        }
+
+        if (!tabList.hasOwnProperty(current[0].windowId)) {
+          tabList[current[0].windowId] = current;
+        } else {
+          const currentTabs = current.slice();
+
+          currentTabs.shift(); // main page 제외
+          tabList[current[0].windowId].push(...currentTabs);
+        }
+
+        setStorage({ tabList });
+
+        current.forEach((tab) => {
+          chrome.tabs.remove(tab.id);
+        });
+
+        chrome.tabs.create({
+          url: "main.html",
+          pinned: true,
+        });
+      }
+    }
+  );
+});
