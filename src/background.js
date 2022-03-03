@@ -22,9 +22,10 @@ chrome.tabs.onActivated.addListener((tab) => {
       if (current.length > tabCount) {
         let { tabList } = await getTabList();
 
+        console.log("tabList from background ==== >", tabList);
         if (!tabList) {
           setStorage({ tabList: {} });
-          tabList = await getTabList();
+          tabList = {};
         }
 
         if (!tabList.hasOwnProperty(current[0].windowId)) {

@@ -6,10 +6,81 @@
 .tab-card {
   display: flex;
   width: 500px;
-  height: 50px;
-  border: 3px solid black;
+  height: 40px;
+  border: 2px solid black;
   align-items: center;
   justify-content: center;
   margin: 10px;
   border-radius: 5px;
+}
+
+#tab-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 450px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 15px;
+  box-shadow: 2px 2px 1px rgb(172, 172, 172);
+}
+
+#search-button {
+  width: 100px;
+  border-radius: 30px;
+  margin-left: 10px;
+  color: white;
+  font-size: large;
+  border: 0px;
+  background: linear-gradient(to bottom right, #4834d4, #9090cc);
+}
+
+.bookmark {
+  border: none;
+  background: none;
+  color: #ffc800;
+  font-size: x-large;
+}
+
+.checkmark {
+  border: none;
+  background: none;
+  color: #19a130;
+  font-size: x-large;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  color: #000000;
+  font-size: x-large;
+}
+
+#trashcan {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-radius: 50%;
+  background: #f1c498;
+  color: #000000;
+  font-size: xx-large;
+  box-shadow: 3px 3px 2px rgb(100, 100, 100);
+}
+
+.tab-favicon {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
 }
