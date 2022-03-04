@@ -14,7 +14,8 @@
   border-radius: 5px;
 }
 
-#tab-list {
+#tab-list,
+#search-result {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,19 +30,10 @@
 #search-input {
   width: 450px;
   height: 30px;
+  border: 2px solid #c5d3df;
   border-radius: 5px;
   padding-left: 15px;
-  box-shadow: 2px 2px 1px rgb(172, 172, 172);
-}
-
-#search-button {
-  width: 100px;
-  border-radius: 30px;
-  margin-left: 10px;
-  color: white;
-  font-size: large;
-  border: 0px;
-  background: linear-gradient(to bottom right, #4834d4, #9090cc);
+  box-shadow: 2px 2px 1px rgb(172 172 172);
 }
 
 .bookmark {
@@ -83,4 +75,19 @@
   width: 20px;
   height: 20px;
   padding-right: 5px;
+}
+
+#filter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  margin-right: 20px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.underline {
+  border-bottom: 3px solid black;
 }

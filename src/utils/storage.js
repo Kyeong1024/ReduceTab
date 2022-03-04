@@ -12,3 +12,7 @@ export async function getTabCount() {
 export async function getTabList() {
   return await chrome.storage.local.get(["tabList"]);
 }
+
+export async function getBookmarkFolderId() {
+  return await chrome.storage.local.get(["bookmarkId"]);
+}
