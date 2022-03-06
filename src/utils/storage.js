@@ -16,3 +16,7 @@ export async function getTabList() {
 export async function getBookmarkFolderId() {
   return await chrome.storage.local.get(["bookmarkId"]);
 }
+
+export async function getOnOff() {
+  return await chrome.storage.local.get(["isOff"]);
+}

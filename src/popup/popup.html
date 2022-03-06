@@ -4,19 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Reduce Tab</title>
   </head>
   <body>
     <div id="tab-header">
       <h2>Reduce Tab</h2>
-      <div id="tab-count"></div>
+      <input type="number" id="tab-count" min="5" />
       <label class="switch">
         <input type="checkbox" id="on-off-switch" checked />
         <span class="slider"></span>
       </label>
     </div>
-    <div>
-      <canvas id="chart" width="300" height="250"></canvas>
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="🔍  Search" />
+    </div>
+    <ul id="search-result"></ul>
+    <div id="chart-container">
+      <canvas id="chart" width="250" height="400"></canvas>
     </div>
   </body>
 </html>

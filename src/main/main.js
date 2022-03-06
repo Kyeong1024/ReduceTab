@@ -42,7 +42,6 @@ $searchInput.addEventListener("input", (event) => {
       const trimedText = tabInfo.title.replace(/ /gi, "").toLowerCase();
 
       if (trimedText.includes(event.target.value)) {
-        console.log("same ===========>");
         const tabContainer = document.createElement("div");
         tabContainer.className = "tab-container";
 

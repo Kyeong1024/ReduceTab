@@ -5,3 +5,7 @@ export async function getCurrentWindow() {
 export async function getBookmarkTree() {
   return await chrome.bookmarks.getTree();
 }
+
+export async function getAllTabs() {
+  return await chrome.tabs.query({});
+}
