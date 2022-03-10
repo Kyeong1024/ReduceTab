@@ -7,6 +7,14 @@ const $trashcan = document.getElementById("trashcan");
 const $searchInput = document.getElementById("search-input");
 const $searchResult = document.getElementById("search-result");
 
-search.init($searchInput, $searchResult, CURRENT);
-tabList.init($tabList);
-deleteTab.clickButton($trashcan, $tabList);
+const main = (function () {
+  return {
+    init: function () {
+      search.init($searchInput, $searchResult, CURRENT);
+      tabList.init($tabList);
+      deleteTab.clickButton($trashcan, $tabList);
+    },
+  };
+})();
+
+main.init();
