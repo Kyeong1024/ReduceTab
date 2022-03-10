@@ -1,44 +1,102 @@
+h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+#result-container {
+  position: fixed;
+  width: 99%;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  padding-left: 15px;
+  width: 450px;
+  height: 30px;
+  border: 2px solid #c5d3df;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px rgb(172 172 172);
+}
+
+#tab-list {
+  margin-top: 20px;
+}
+
+#trashcan {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-radius: 5px;
+  background: #d94c4c;
+  color: #ffffff;
+  font-size: xx-large;
+  box-shadow: 3px 3px 2px rgb(100, 100, 100);
+}
+
+#trashcan:active {
+  background-color: #d94c4c;
+  box-shadow: 0 5px #ffffff;
+  transform: translateY(4px);
+  box-shadow: 3px 3px 2px rgb(100, 100, 100);
+}
+
 .tab-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .tab-card {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
   width: 500px;
   height: 40px;
   border: 2px solid black;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
   border-radius: 5px;
+  padding-left: 3px;
+  overflow: hidden;
 }
 
 .tab-card:hover {
   background-color: aliceblue;
 }
 
-#tab-list,
-#search-result {
+.list {
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-#search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#search-input {
   width: 450px;
   height: 30px;
-  border: 2px solid #c5d3df;
-  border-radius: 5px;
-  margin-top: 50px;
-  padding-left: 15px;
-  box-shadow: 2px 2px 1px rgb(172 172 172);
+  padding: 3px;
+  border: 1px solid #b6adad;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.list:hover {
+  background-color: rgb(206, 231, 253);
+}
+
+.tab-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bookmark {
@@ -62,35 +120,10 @@
   font-size: x-large;
 }
 
-#trashcan {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 50px;
-  height: 50px;
-  border: 0px;
-  border-radius: 50%;
-  background: #f1c498;
-  color: #000000;
-  font-size: xx-large;
-  box-shadow: 3px 3px 2px rgb(100, 100, 100);
-}
-
 .tab-favicon {
+  padding-right: 5px;
   width: 20px;
   height: 20px;
-  padding-right: 5px;
-}
-
-#filter-container {
-  display: flex;
-  justify-content: center;
-}
-
-.filter {
-  margin-right: 20px;
-  font-size: medium;
-  font-weight: 400;
 }
 
 .underline {

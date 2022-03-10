@@ -10,16 +10,16 @@ body {
 }
 
 #tab-count {
-  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 50px;
   height: 27px;
   border: 5px solid;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 3px;
-  text-align: center;
+  font-size: large;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -33,32 +33,49 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 10px;
 }
 
-#search-result {
-  position: fixed;
+#search-input {
+  width: 80%;
+  height: 20px;
+  border-radius: 3px;
+}
+#search-result-container {
+  display: flex;
+  justify-content: center;
 }
 
-.tab-list {
+#search-result {
+  position: fixed;
+  padding-left: 0px;
+  margin-top: 3px;
+}
+
+.list {
   display: flex;
   align-items: center;
   width: 250px;
   height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  border: 1px solid black;
-  background-color: white;
   margin-top: 1px;
-  /* text-overflow: clip; */
+  padding: 1px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
 }
 
-.tab-list:hover {
+.list:hover {
   background-color: rgb(206, 231, 253);
+}
+
+.tab-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tab-favicon {
   width: 20px;
   padding: 5px;
 }
-/* The switch - the box around the slider */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -67,14 +84,12 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-left: 30px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;

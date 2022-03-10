@@ -7,7 +7,6 @@ module.exports = {
   devtool: "cheap-module-source-map",
   entry: {
     popup: "./src/popup/popup.js",
-    options: "./src/options/options.js",
     background: "./src/background.js",
     main: "./src/main/main.js",
   },
@@ -32,11 +31,6 @@ module.exports = {
       filename: "./popup.html",
       template: "./src/popup/popup.html",
       chunks: ["popup"],
-    }),
-    new HtmlPlugin({
-      filename: "./options.html",
-      template: "./src/options/options.html",
-      chunks: ["options"],
     }),
     new HtmlPlugin({
       filename: "./main.html",
