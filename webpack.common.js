@@ -1,6 +1,7 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -16,13 +17,24 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        type: "asset/resource",
+        test: /\.(jpg|jpeg|png|svg|ttf)$/,
+      },
     ],
   },
   plugins: [
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+    }),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve("src/manifest.json"),
+          from: path.resolve("src/static/manifest.json"),
+          to: path.resolve("dist"),
+        },
+        {
+          from: path.resolve("src/static/icon.png"),
           to: path.resolve("dist"),
         },
       ],
