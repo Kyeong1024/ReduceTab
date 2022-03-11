@@ -1,5 +1,4 @@
 import { getCurrentOnOff, setStorage } from "../storage";
-import { createBookmarkFolder } from "../chromeApi";
 import { controlTab } from "./tab";
 
 export const onoffSwitch = {

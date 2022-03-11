@@ -65,6 +65,7 @@ export async function createBookmarkFolder(title) {
 
       child.children.forEach((info) => {
         if (info.title === title) {
+          chrome.storage.local.set({ bookmarkId: info.id });
           parentId = null;
         }
       });
