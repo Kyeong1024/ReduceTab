@@ -6,7 +6,7 @@ import {
 } from "../storage";
 
 import {
-  getCurrentWindow,
+  getCurrentWindowId,
   InsertBookmark,
   createTab,
   createBookmarkFolder,
@@ -14,21 +14,10 @@ import {
   removeTab,
 } from "../chromeApi";
 
-import { ICON, DEFAULT_FAVICONURL } from "../constant";
+import { ICON, DEFAULT_FAVICONURL, FOLDER_NAME } from "../constant";
 
-export const tabCount = {
-  init: function (target) {
-    this.showCurrentTabCount(target);
-    this.changeTabCount(target);
-  },
-  showCurrentTabCount: async function (target) {
-    const tabCount = await getTabCount();
-    target.value = tabCount;
-  },
-  changeTabCount: function (target) {
-    target.addEventListener("change", this.saveTabCount);
-  },
-  saveTabCount: function (event) {
+export const tabCount = (function () {
+  function saveTabCount(event) {
     const count = event.target.value;
 
     if (count < 5 || count > 25) {
@@ -38,24 +27,38 @@ export const tabCount = {
     }
 
     setStorage({ tabCount: count });
-  },
-};
+  }
+
+  return {
+    init: function (target) {
+      this.showCurrentTabCount(target);
+      this.changeTabCount(target);
+    },
+    showCurrentTabCount: async function (target) {
+      const tabCount = await getTabCount();
+      target.value = tabCount;
+    },
+    changeTabCount: function (target) {
+      target.addEventListener("change", saveTabCount);
+    },
+  };
+})();
 
 export const tabList = (function () {
+  let tabList;
+  let windowId;
+
   return {
     init: async function (target) {
       await this.getCurrentWindowTabInfo();
       this.spreadTabList(target);
     },
     getCurrentWindowTabInfo: async function () {
-      const tabList = await getTabList();
-      const windowId = await getCurrentWindow();
-
-      this.tabList = tabList;
-      this.currentWindowId = windowId;
+      tabList = await getTabList();
+      windowId = await getCurrentWindowId();
     },
     spreadTabList: function (target) {
-      const currentTabs = this.tabList[this.currentWindowId].slice();
+      const currentTabs = tabList[windowId].slice();
       const result = currentTabs.map((tab) => {
         return this.createTabCard(tab);
       });
@@ -151,7 +154,7 @@ export const tabList = (function () {
       InsertBookmark(bookmarkId, url, title);
     },
     saveTabList: function () {
-      setStorage({ tabList: this.tabList });
+      setStorage({ tabList });
     },
     createDelete: function (tab) {
       const deleteButton = document.createElement("button");
@@ -171,9 +174,9 @@ export const tabList = (function () {
       this.deleteTarget(tab);
     },
     deleteTarget: function (clickedTab) {
-      this.tabList[this.currentWindowId] = this.tabList[
-        this.currentWindowId
-      ].filter((tabInfo) => tabInfo.id !== clickedTab.id);
+      tabList[windowId] = tabList[windowId].filter(
+        (tabInfo) => tabInfo.id !== clickedTab.id
+      );
 
       this.saveTabList();
     },
@@ -187,7 +190,7 @@ export const deleteTab = (function () {
     },
     getCurrentTabList: async function () {
       const tabList = await getTabList();
-      const windowId = await getCurrentWindow();
+      const windowId = await getCurrentWindowId();
       return { tabList, windowId };
     },
     deleteAtOnce: async function (target) {
@@ -237,7 +240,7 @@ export const controlTab = (function () {
         }
 
         setStorage({ tabList });
-        createBookmarkFolder("Reduce tab");
+        createBookmarkFolder(FOLDER_NAME);
 
         const tabIds = [];
 

@@ -9,5 +9,6 @@ const ALL = "all";
 const CURRENT = "current";
 const DEFAULT_FAVICONURL =
   "https://www.google.com/chrome/static/images/chrome-logo.svg";
+const FOLDER_NAME = "Reduce tab";
 
-export { ICON, ALL, CURRENT, DEFAULT_FAVICONURL };
+export { ICON, ALL, CURRENT, DEFAULT_FAVICONURL, FOLDER_NAME };

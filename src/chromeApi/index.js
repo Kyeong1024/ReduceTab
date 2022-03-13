@@ -1,4 +1,4 @@
-export async function getCurrentWindow() {
+export async function getCurrentWindowId() {
   const { windowId } = await chrome.tabs.getCurrent();
   return windowId;
 }

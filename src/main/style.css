@@ -1,6 +1,13 @@
+html,
+body {
+  background-color: #f3f3f9;
+  height: 100%;
+}
+
 h1 {
   text-align: center;
   font-size: xx-large;
+  color: whitesmoke;
 }
 
 #search-result {
@@ -23,11 +30,17 @@ h1 {
 
 #search-input {
   padding-left: 15px;
-  width: 450px;
+  width: 600px;
   height: 30px;
   border: 2px solid #c5d3df;
   border-radius: 5px;
   box-shadow: 2px 2px 1px rgb(172 172 172);
+}
+
+#header {
+  height: 250px;
+  padding-top: 10px;
+  background-color: #a0b396;
 }
 
 #tab-list {
@@ -68,20 +81,20 @@ h1 {
   margin: 5px;
   width: 500px;
   height: 40px;
-  border: 2px solid black;
+  border: 2px solid #b2b2b2;
   border-radius: 5px;
   padding-left: 3px;
   overflow: hidden;
 }
 
 .tab-card:hover {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
 }
 
 .list {
   display: flex;
   align-items: center;
-  width: 450px;
+  width: 600px;
   height: 30px;
   padding: 3px;
   border: 1px solid #b6adad;

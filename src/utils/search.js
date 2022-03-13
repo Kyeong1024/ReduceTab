@@ -1,28 +1,33 @@
 import { getAllTabs, getTabList } from "../storage";
-import { getCurrentWindow, focusTab, focusWindow } from "../chromeApi";
+import { getCurrentWindowId, focusTab, focusWindow } from "../chromeApi";
 import { ALL, CURRENT, DEFAULT_FAVICONURL } from "../constant";
 
 export const search = (function () {
-  let timer = null;
+  let timer;
+  let listName;
 
   return {
+    init: function (target, resultElement, name) {
+      listName = name;
+
+      document.body.addEventListener(
+        "click",
+        this.resetElement.bind(this, resultElement)
+      );
+
+      target.addEventListener("input", this.debounce.bind(this, resultElement));
+    },
     getTabList: async function (name) {
       switch (name) {
         case ALL:
           return await getAllTabs();
         case CURRENT:
           const tabList = await getTabList();
-          const windowId = await getCurrentWindow();
+          const windowId = await getCurrentWindowId();
           return tabList[windowId];
         default:
           break;
       }
-    },
-    init: function (target, resultElement, listName) {
-      this.listName = listName;
-      this.onClickResetElement(resultElement);
-
-      target.addEventListener("input", this.debounce.bind(this, resultElement));
     },
     debounce: function (resultElement, event) {
       if (timer) {
@@ -41,7 +46,7 @@ export const search = (function () {
 
       this.resetElement(resultElement);
 
-      const targetTabList = await this.getTabList(this.listName);
+      const targetTabList = await this.getTabList(listName);
 
       if (!targetTabList) return;
 
@@ -81,11 +86,6 @@ export const search = (function () {
     },
     resetElement: function (target) {
       target.textContent = null;
-    },
-    onClickResetElement: function (target) {
-      document.body.addEventListener("click", () => {
-        target.textContent = null;
-      });
     },
   };
 })();

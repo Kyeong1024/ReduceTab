@@ -9,17 +9,19 @@ const $searchInput = document.getElementById("search-input");
 const $searchResult = document.getElementById("search-result");
 const $canvas = document.getElementById("chart");
 
-const popup = (function () {
-  return {
-    init: async function () {
-      const tabList = await getAllTabs();
-
-      tabCount.init($tabCount);
-      onoffSwitch.click($onoffSwitch);
-      search.init($searchInput, $searchResult, ALL);
-      chart.init($canvas, tabList);
-    },
+const init = async function () {
+  const position = {
+    chartCenter: 150,
+    rectX: 270,
+    rectY: 10,
   };
-})();
 
-popup.init();
+  const tabList = await getAllTabs();
+
+  tabCount.init($tabCount);
+  onoffSwitch.click($onoffSwitch);
+  search.init($searchInput, $searchResult, ALL);
+  chart.init($canvas, tabList, position);
+};
+
+init();
