@@ -59,7 +59,7 @@ Tab을 많이 띄워놓게 되면 **memory를 많이 소비**하는 것 뿐만 �
 3. 검색기능을 제공합니다. 검색은 전 범위 탭에 대해서 검색이 가능합니다.
 4. Chart를 제공하여 사용자가 사용하는 사이트 정보의 빈도를 시각적으로 표현합니다.
 
-**Reduce Tap Main Page**
+**Reduce Tap Main Page**   
 ![main](https://user-images.githubusercontent.com/38717176/158220855-52658645-6d32-48c6-a871-e1a1ff5641fe.png)
 
 1. 해당 페이지의 탭정보에 한해 검색기능을 지원합니다.
