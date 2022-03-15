@@ -7,7 +7,7 @@ awakeAlarm();
 chrome.windows.onRemoved.addListener(async (id) => {
   const tabList = await getTabList();
 
-  if (!Object.keys(tabList).length) return;
+  if (!Object.keys(tabList).length || !!tabList[id]) return;
 
   const copiedTabList = Object.assign({}, tabList);
   delete copiedTabList[id];
@@ -15,7 +15,7 @@ chrome.windows.onRemoved.addListener(async (id) => {
   setStorage({ tabList: copiedTabList });
 });
 
-chrome.tabs.onActivated.addListener(async () => {
+chrome.tabs.onActivated.addListener(async (tab) => {
   const isOff = await getCurrentOnOff();
 
   if (!isOff) {

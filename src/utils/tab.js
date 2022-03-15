@@ -50,12 +50,19 @@ export const tabList = (function () {
 
   return {
     init: async function (target) {
-      await this.getCurrentWindowTabInfo();
+      const { list, id } = await this.getCurrentWindowTabInfo();
+
+      if (!Object.keys(list).length) return;
+
+      tabList = list;
+      windowId = id;
       this.spreadTabList(target);
     },
     getCurrentWindowTabInfo: async function () {
-      tabList = await getTabList();
-      windowId = await getCurrentWindowId();
+      const list = await getTabList();
+      const id = await getCurrentWindowId();
+
+      return { list, id };
     },
     spreadTabList: function (target) {
       const currentTabs = tabList[windowId].slice();
