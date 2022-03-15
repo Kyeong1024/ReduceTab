@@ -10,7 +10,7 @@ export const chart = (function () {
       const tabs = tabList;
       const tabObj = {};
 
-      if (tabs.length < 10) return;
+      if (tabs.length < 10) return [];
 
       tabs.forEach((tab) => {
         const tabUrl = tab.url;
