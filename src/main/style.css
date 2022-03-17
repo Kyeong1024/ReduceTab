@@ -19,8 +19,8 @@ h1 {
 }
 
 #result-container {
-  position: fixed;
-  width: 99%;
+  position: relative;
+  width: 100%;
 }
 
 #search-container {
