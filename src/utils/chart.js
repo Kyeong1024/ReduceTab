@@ -2,15 +2,19 @@ export const chart = (function () {
   return {
     init: async function (target, tabList, center) {
       const rankList = this.calculateTabCount(tabList);
-      const chartData = this.calculateDegree(rankList, tabList.length);
+      const totalLength = tabList.length;
 
-      this.drawChart(chartData, target, center);
+      if (!rankList) return;
+
+      const chartData = this.calculateDegree(rankList, totalLength);
+
+      this.drawChart(chartData, target, center, totalLength);
     },
     calculateTabCount: function (tabList) {
       const tabs = tabList;
       const tabObj = {};
 
-      if (tabs.length < 10) return [];
+      if (tabs.length < 10) return;
 
       tabs.forEach((tab) => {
         const tabUrl = tab.url;
@@ -59,18 +63,19 @@ export const chart = (function () {
 
       return list;
     },
-    drawChart: function (chartData, target, position) {
+    drawChart: function (chartData, target, position, total) {
       const color = ["#5185ec", "#d85140", "#f1be42", "#58a55c", "#e9e9e7"];
       chartData.push({ degree: 360, url: "etc" });
 
+      const centerX = position.chartCenter;
+      const centerY = position.chartCenter;
+      const rectX = position.rectX;
+      const rectY = position.rectY;
+      const radius = 100;
+      const message = `Total ${total}`;
+
       if (target.getContext) {
         const ctx = target.getContext("2d");
-        const centerX = position.chartCenter;
-        const centerY = position.chartCenter;
-        const rectX = position.rectX;
-        const rectY = position.rectY;
-        const radius = 100;
-
         ctx.font = "12px Sans-Serif";
 
         for (let i = 0; i < chartData.length; i++) {
@@ -98,6 +103,9 @@ export const chart = (function () {
         ctx.fillStyle = "white";
         ctx.arc(centerX, centerY, centerX * 0.4, 0, Math.PI * 2, true);
         ctx.fill();
+
+        ctx.fillStyle = "black";
+        ctx.fillText(message, centerX - 20, centerY);
       }
     },
     roundedRect: function (ctx, x, y, width, height, radius, color) {

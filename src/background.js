@@ -9,6 +9,11 @@ chrome.windows.onRemoved.addListener(async (id) => {
 
   if (!Object.keys(tabList).length || !!tabList[id]) return;
 
+  if (Object.keys(tabList).length === 1) {
+    setStorage({ tabList: null });
+    return;
+  }
+
   const copiedTabList = Object.assign({}, tabList);
   delete copiedTabList[id];
 
